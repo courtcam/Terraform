@@ -40,7 +40,10 @@ variable "instance_secgroup" {
 }
 
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 # S3 Bucket
 
 variable "s3_bucket_name" {
@@ -52,9 +55,31 @@ variable "s3_bucket_name" {
 # VPC ID
 
 variable "vpc_id" {
+<<<<<<< Updated upstream
     description = "my vpc_id"
     type    = string
     default = "vpc-0258d21eed8eb7a31"
 }
 
+=======
+  description = "my vpc_id"
+  type        = string
+  default     = "vpc-0258d21eed8eb7a31"
+}
+
+# ingress cider
+variable "ingress_cidr" {
+  description = "my ingress cidr ip"
+  type        = string
+  default     = "0.0.0.0/0"
+}
+
+#egress cider
+
+variable "egress_cidr" {
+  description = "my egress cidr ip"
+  type        = string
+  default     = "0.0.0.0/0"
+}
+>>>>>>> Stashed changes
 
