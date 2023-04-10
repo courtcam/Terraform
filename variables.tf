@@ -39,11 +39,6 @@ variable "instance_secgroup" {
   default = "IB_SSH_TESTING"
 }
 
-
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 # S3 Bucket
 
 variable "s3_bucket_name" {
@@ -55,13 +50,6 @@ variable "s3_bucket_name" {
 # VPC ID
 
 variable "vpc_id" {
-<<<<<<< Updated upstream
-    description = "my vpc_id"
-    type    = string
-    default = "vpc-0258d21eed8eb7a31"
-}
-
-=======
   description = "my vpc_id"
   type        = string
   default     = "vpc-0258d21eed8eb7a31"
@@ -81,5 +69,5 @@ variable "egress_cidr" {
   type        = string
   default     = "0.0.0.0/0"
 }
->>>>>>> Stashed changes
+
 
