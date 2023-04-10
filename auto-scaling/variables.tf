@@ -14,3 +14,22 @@ variable "instance_type" {
   type    = string
   default = "t2.micro"
 }
+
+
+
+# Key pair for EC2 instance
+
+variable "instance_keypair" {
+  type    = string
+  default = "AWSLAB"
+}
+
+
+
+
+# Secuirty group for EC2 instance
+
+variable "instance_secgroup" {
+  type    = string
+  default = "web-sg"
+}
