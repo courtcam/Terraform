@@ -2,7 +2,7 @@
 
 variable "instance_ami" {
   type    = string
-  default = "ami-0fa1de1d60de6a97e"
+  default = "ami-069aabeee6f53e7bf"
 }
 
 
@@ -39,7 +39,7 @@ variable "instance_secgroup" {
 
 variable "s3_bucket_name" {
   type    = string
-  default = "web-tier-bucket-ccampbell-dev"
+  default = "tf-remote-backend-bucket-cc"
 }
 
 
@@ -47,7 +47,7 @@ variable "s3_bucket_name" {
 
 variable "tf-vpc-id" {
   type    = string
-  default = "vpc-02ce46c857cd603ba"
+  default = "vpc-0258d21eed8eb7a31"
 }
 
 
@@ -55,4 +55,27 @@ variable "tf-vpc-id" {
 variable "name-igw" {
   type    = string
   default = "tf-igw"
+}
+
+
+# dynamodb name
+variable "dynamodb-table" {
+  type    = string
+  default = "terraform-state-lock-cc"
+
+}
+
+
+# dynamodb hask key for table
+variable "dynamodb-hash-key" {
+  type    = string
+  default = "LockID"
+}
+
+
+
+# ingress cidr notation for ipv4
+variable "ingress-cidr" {
+  type    = string
+  default = "0.0.0.0/0"
 }
