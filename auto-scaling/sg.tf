@@ -8,23 +8,23 @@ resource "aws_security_group" "tf-asg-access" {
 
   #Incoming traffic
   ingress {
-    from_port   = 22
-    to_port     = 22
+    from_port   = var.ingress-port-ssh
+    to_port     = var.ingress-port-ssh
     protocol    = "tcp"
     cidr_blocks = [var.ingress-cidr]
   }
 
   ingress {
-    from_port   = 80
-    to_port     = 80
+    from_port   = var.ingress-port-http
+    to_port     = var.ingress-port-http
     protocol    = "tcp"
     cidr_blocks = [var.ingress-cidr]
 
   }
 
   egress {
-    from_port        = 0
-    to_port          = 0
+    from_port        = var.egress-port
+    to_port          = var.egress-port
     protocol         = "-1"
     cidr_blocks      = ["0.0.0.0/0"]
     ipv6_cidr_blocks = ["::/0"]

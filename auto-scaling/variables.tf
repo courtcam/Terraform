@@ -79,3 +79,24 @@ variable "ingress-cidr" {
   type    = string
   default = "0.0.0.0/0"
 }
+
+
+# allow inbound port for ssh 
+variable "ingress-port-ssh" {
+  type    = number
+  default = 22
+}
+
+
+# allow inbound port for http 
+variable "ingress-port-http" {
+  type    = number
+  default = 80
+}
+
+
+# allow outbound port for http 
+variable "egress-port" {
+  type    = number
+  default = 0
+}
